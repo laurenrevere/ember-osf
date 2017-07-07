@@ -458,8 +458,8 @@ export default Ember.Component.extend(Analytics, hostAppName, {
                           item => item.key.toLowerCase().replace(/\s/g,''));
 
               //Grab OSF providers
-              let osfProviderNames = [provider.get('id')];
-              let osfProviderSources = [provider.get('shareSource') || provider.get('name')];
+              let osfProviderNames = [themeProvider.get('id')];
+              let osfProviderSources = [themeProvider.get('shareSource') || themeProvider.get('name')];
               this.get('fetchedProviders').forEach(provider => {
                   osfProviderNames.push(provider.get('id').toLowerCase());
                   osfProviderSources.push(provider.get('shareSource') || provider.get('name'));
